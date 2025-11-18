@@ -1,3 +1,4 @@
+CUDA 12.4 Compatible
 # Detecting & Penalizing Mesh Intersections
 
 This package provides a PyTorch module that can efficiently (1) detect and (2) penalize (self-)intersections for a triangular mesh.
@@ -56,7 +57,13 @@ cd torch-mesh-isect
 ```Shell
 pip install -r requirements.txt 
 ```
-**3. Run the *setup.py* script**
+**3. Set the target compute capability**
+```Shell
+export TORCH_CUDA_ARCH_LIST="8.9"
+```
+modify the compute capability version to your specific GPU architecture
+
+**4. Run the *setup.py* script**
 ```Shell
 python setup.py install
 ```
